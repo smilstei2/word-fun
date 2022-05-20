@@ -1,22 +1,31 @@
 {
   "files": {
     "main.css": "/word-fun/static/css/main.e6c13ad2.css",
-    "main.js": "/word-fun/static/js/main.2bd50366.js",
+    "main.js": "/word-fun/static/js/main.4f1f3b2e.js",
     "static/js/787.cf7ad2e7.chunk.js": "/word-fun/static/js/787.cf7ad2e7.chunk.js",
     "static/media/scrabble_img.png": "/word-fun/static/media/scrabble_img.b533a9fd251c67ef893e.png",
     "static/media/online_crossword_img.jpg": "/word-fun/static/media/online_crossword_img.436a46486cefa82d0dd1.jpg",
+    "static/media/words_game.jpg": "/word-fun/static/media/words_game.1cf6458a6499a5d220e1.jpg",
     "static/media/word_on_the_street_img.jpg": "/word-fun/static/media/word_on_the_street_img.39917bd42cc5fc853716.jpg",
+    "static/media/word_searches_img.jpg": "/word-fun/static/media/word_searches_img.2493bcb9fe77077e4d73.jpg",
     "static/media/zingo_img.jpg": "/word-fun/static/media/zingo_img.d50e8c4d406cae5f9e14.jpg",
+    "static/media/codenames.jpg": "/word-fun/static/media/codenames.0869c7d9f061d08df6b8.jpg",
+    "static/media/jabuka_img.jpg": "/word-fun/static/media/jabuka_img.41c315ee9b2459e5329b.jpg",
+    "static/media/blank_slate_img.jpg": "/word-fun/static/media/blank_slate_img.e66357d2fc9d91b1f03d.jpg",
+    "static/media/upwords_img.jpg": "/word-fun/static/media/upwords_img.f764c271a745142dae8a.jpg",
+    "static/media/quiddler_img.jpg": "/word-fun/static/media/quiddler_img.06878d5716615b961310.jpg",
     "static/media/wordical_img.jpg": "/word-fun/static/media/wordical_img.58158616dce56dafff4f.jpg",
+    "static/media/name_that_word_img.jpg": "/word-fun/static/media/name_that_word_img.414a6769636d5737a20d.jpg",
     "static/media/a_little_wordy.jpg": "/word-fun/static/media/a_little_wordy.dd9d11ee9f32c41e958d.jpg",
     "static/media/banana_img.jpg": "/word-fun/static/media/banana_img.58d61964e3295fe765c2.jpg",
+    "static/media/boggle_img.jpg": "/word-fun/static/media/boggle_img.0562747cfc4f29798287.jpg",
     "index.html": "/word-fun/index.html",
     "main.e6c13ad2.css.map": "/word-fun/static/css/main.e6c13ad2.css.map",
-    "main.2bd50366.js.map": "/word-fun/static/js/main.2bd50366.js.map",
+    "main.4f1f3b2e.js.map": "/word-fun/static/js/main.4f1f3b2e.js.map",
     "787.cf7ad2e7.chunk.js.map": "/word-fun/static/js/787.cf7ad2e7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2bd50366.js"
+    "static/js/main.4f1f3b2e.js"
   ]
 }
