@@ -15,6 +15,15 @@ import word_on_the_street_img from "../../src/images/word_on_the_street_img.jpg"
 import zingo_img from "../../src/images/zingo_img.jpg";
 import a_little_wordy_img from "../../src/images/a_little_wordy.jpg";
 import online_crossword_img from "../../src/images/online_crossword_img.jpg";
+import blank_slate_img from "../../src/images/blank_slate_img.jpg";
+import boggle_img from "../../src/images/boggle_img.jpg";
+import upwords_img from "../../src/images/upwords_img.jpg";
+import words_game from "../../src/images/words_game.jpg";
+import quiddler_img from "../../src/images/quiddler_img.jpg";
+import name_that_word_img from "../../src/images/name_that_word_img.jpg";
+import word_searches_img from "../../src/images/word_searches_img.jpg";
+import jabuka_img from "../../src/images/jabuka_img.jpg";
+import codenames from "../../src/images/codenames.jpg";
 
 const Item = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -356,12 +365,275 @@ export function Catalog() {
                           Online Crosswords
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Online Crosswords is a free word game that includes Word Connect, Word Cross, Word Score currently.
+                          Online Crosswords is a free word game that includes
+                          Word Connect, Word Cross, Word Score currently.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <a href="https://www.amazon.com/Word-Games-Cross-Connect-Search/dp/B07CGCSKTJ/ref=sr_1_5?crid=QRL1UP36EZFJ&keywords=word+games&qid=1653007746&sprefix=word+games%2Caps%2C100&sr=8-5" target="_blank"><Button size="small" color="primary">
+                      <a
+                        href="https://www.amazon.com/Word-Games-Cross-Connect-Search/dp/B07CGCSKTJ/ref=sr_1_5?crid=QRL1UP36EZFJ&keywords=word+games&qid=1653007746&sprefix=word+games%2Caps%2C100&sr=8-5"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image={blank_slate_img}
+                        alt="blank slate image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Blank Slate
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Easy to learn, quick to play, and fun for the whole
+                          family; just grab a slate, write a word, and get ready
+                          to make a match.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a
+                        href="https://www.amazon.com/BLANK-SLATETM-Family-Friendly-Association/dp/B07G2VHPRW/ref=sr_1_1_sspa?crid=39CS5QP2Z6KID&keywords=word%2Bgames&qid=1653015737&sprefix=word%2Bgames%2Caps%2C123&sr=8-1-spons&smid=A1HLCWE9RXZA0X&th=1"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image={boggle_img}
+                        alt="boggle image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Boggle
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Shake up the letters, flip the timer and spot the
+                          words fast
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a
+                        href="https://www.amazon.com/Hasbro-Gaming-C2187-Boggle-Classic/dp/B01N6PS4L0/ref=sr_1_5?crid=3NIZM7ONAX8HA&keywords=word%2Bgames&qid=1653015983&sprefix=word%2Caps%2C127&sr=8-5&th=1"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="280"
+                        image={upwords_img}
+                        alt="upwords image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Upwords
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Play Words Across Or Down To Make New Words Or Stack
+                          On Top Of Tiles To Change A Word!
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a
+                        href="https://www.amazon.com/Upwords-Challenging-Family-Stackable-Letter/dp/B07N3ZM4GQ/ref=sr_1_6?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-6"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="280"
+                        image={words_game}
+                        alt="words game image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Words Game
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Create 3-7 letter words from given random letters.
+                          Race against the clock in 5 different levels of
+                          difficulty.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a
+                        href="https://www.amazon.com/StylezSoft-Words-Game/dp/B005QNRJI2/ref=sr_1_9?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-9"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="280"
+                        image={quiddler_img}
+                        alt="quiddler image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Quiddler
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          The SHORT Word Game attracts non-word-game players as
+                          well as people who love word games!
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a
+                        href="https://www.amazon.com/SET-Enterprises-5000-Quiddler-Card/dp/B00000IV95/ref=sr_1_11?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-11"
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image={name_that_word_img}
+                        alt="name that word image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Name That Word
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                        Fun and easy to play, the team that guesses the most words in the allotted time wins.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                    <a
+                        href="https://www.amazon.com/After-Dinner-Amusements-Prompts-Family/dp/1452173761/ref=sr_1_18?crid=3NIZM7ONAX8HA&keywords=word%2Bgames&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-18&th=1"
+                        target="_blank"
+                      ><Button size="small" color="primary">
                         Follow Link
                       </Button></a>
                     </CardActions>
@@ -384,25 +656,26 @@ export function Catalog() {
                     <CardActionArea>
                       <CardMedia
                         component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
+                        height="300"
+                        image={word_searches_img}
+                        alt="word searches image"
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
+                          Word Searches
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
+                        Strain your brain, not your eyes, as you solve the word searches.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button size="small" color="primary">
+                    <a
+                        href="https://www.amazon.com/Brain-Games-Searches-Large-Print/dp/1450802281/ref=sr_1_19?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-19"
+                        target="_blank">
+                         <Button size="small" color="primary">
                         Follow Link
-                      </Button>
+                      </Button></a>
                     </CardActions>
                   </Card>
                 </Item>
@@ -423,25 +696,26 @@ export function Catalog() {
                     <CardActionArea>
                       <CardMedia
                         component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
+                        height="280"
+                        image={jabuka_img}
+                        alt="jabuka image"
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
+                          Jabuka
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
+                        Boost your brain power with a word game where you bend rules and twist letters to make and steal words in a quick hit of fun!
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
+                    <a
+                        href="https://www.amazon.com/Jabuka-Word-Game-Spontaneous-Fast-Paced/dp/B07TZJTLYX/ref=sr_1_19?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653017587&sprefix=word%2Caps%2C127&sr=8-19"
+                        target="_blank">
                       <Button size="small" color="primary">
                         Follow Link
-                      </Button>
+                      </Button></a>
                     </CardActions>
                   </Card>
                 </Item>
@@ -462,259 +736,26 @@ export function Catalog() {
                     <CardActionArea>
                       <CardMedia
                         component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
+                        height="280"
+                        image={codenames}
+                        alt="codename image"
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
+                          Codenames
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
+                        Codenames is a game of guessing which code names (words) in a set are related to a hint-word given by another player
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
+                    <a
+                        href="https://www.amazon.com/Czech-Games-00031CGE-Codenames/dp/B014Q1XX9S/ref=sr_1_30?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653017802&sprefix=word%2Caps%2C127&sr=8-30"
+                        target="_blank">
                       <Button size="small" color="primary">
                         Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Item>
-              </Grid>
-            </div>
-            <div
-              id="Def"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-              }}
-            >
-              <Grid item xs={8}>
-                <Item>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={scrabble_img}
-                        alt="scrabble image"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Scrabble
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Scrabble, board-and-tile game in which two to four
-                          players compete in forming words with lettered tiles
-                          on a 225-square board.
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button>
+                      </Button></a>
                     </CardActions>
                   </Card>
                 </Item>
