@@ -141,7 +141,7 @@ export function Dictionary() {
                         color="secondary"
                         gutterBottom
                       >
-                        {word}
+                        {definition && word}
                       </Typography>
                       <Typography
                         sx={{ mb: 1.5 }}
@@ -174,7 +174,7 @@ export function Dictionary() {
                         color="secondary"
                         gutterBottom
                       >
-                        {word}
+                        {synonyms?.length > 0 && word}
                       </Typography>
                       <Typography
                         sx={{ mb: 1.5 }}
@@ -210,7 +210,7 @@ export function Dictionary() {
                         color="secondary"
                         gutterBottom
                       >
-                        {word}
+                       {usage?.length > 0 && word}
                       </Typography>
                       <Typography
                         sx={{ mb: 1.5 }}
