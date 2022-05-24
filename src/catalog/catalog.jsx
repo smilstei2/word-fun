@@ -7,7 +7,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, IconButton} from "@mui/material";
 import scrabble_img from "../../src/images/scrabble_img.png";
 import banana_img from "../../src/images/banana_img.jpg";
 import wordical_img from "../../src/images/wordical_img.jpg";
@@ -24,6 +24,7 @@ import name_that_word_img from "../../src/images/name_that_word_img.jpg";
 import word_searches_img from "../../src/images/word_searches_img.jpg";
 import jabuka_img from "../../src/images/jabuka_img.jpg";
 import codenames from "../../src/images/codenames.jpg";
+import { useState } from 'react';
 
 const Item = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -32,9 +33,51 @@ const Item = styled(Card)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-export function Catalog() {
+
+
+
+const catalog_array = {
+      0: Array.from({ Item: scrabble_img}).fill(""),
+      1: Array.from({ Item: banana_img }).fill(""),
+      2: Array.from({ Item: wordical_img }).fill(""),
+      3: Array.from({ Item: word_on_the_street_img }).fill(""),
+      4: Array.from({ Item: zingo_img }).fill(""),
+      5: Array.from({ Item: a_little_wordy_img }).fill(""),
+      6: Array.from({ Item: online_crossword_img}).fill(""),
+      7: Array.from({ Item: blank_slate_img }).fill(""),
+      8: Array.from({ Item: boggle_img }).fill(""),
+      9: Array.from({ Item: upwords_img }).fill(""),
+      10: Array.from({ Item: words_game }).fill(""),
+      11: Array.from({ Item: quiddler_img }).fill(""),
+      12: Array.from({ Item: name_that_word_img }).fill(""),
+      13: Array.from({ Item: word_searches_img }).fill(""),
+      14: Array.from({ Item: jabuka_img }).fill(""),
+      15: Array.from({ Item: codenames }).fill(""),
+}
+
+const searchItems = (item) => {
+  
+}
+
+export function Catalog({searchItems}) {
+  const [value, setValue] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!value) return;
+
+    searchItems(value);
+    setValue("");
+  };
+  // const { items, searchItems } = useContext(TodoContext);
+  // const [itemSearched, setItemSearched] = useState(0);
+
+  // useEffect(() => {
+  //   setItemSearched(items.filter((item) => item.searched).length);
+  // });
+  
   return (
-    <div className="dictionary">
+    <div className="catalog">
       <header className="dictionary-header">
         <div
           style={{
@@ -46,19 +89,41 @@ export function Catalog() {
           id="enterWord"
           className="Name-div"
         >
-          <TextField
-            id="Enter a word"
-            label="Search Catalog"
-            color="secondary"
-            margin="normal"
-            variant="outlined"
-          />
-          <Button variant="text">
-            <SearchOutlinedIcon
-              size="large"
-              color="secondary"
-            ></SearchOutlinedIcon>
-          </Button>
+        
+        <TextField
+          id="outlined-basic"
+          label="Search Catalog"
+          variant="outlined"
+          color="secondary"
+          onChange={(e) => setValue(e.target.value)}
+          sx={{
+            width: "75%",
+            margin: "auto",
+            [`& fieldset`]: { borderRadius: 5 },
+          }}
+          InputProps={{
+            endAdornment: (
+              <Button
+                variant="outline-secondary"
+                onClick={() => searchItems(value)}
+              >
+                <SearchOutlinedIcon sx={{ color: "secondary", margin: "auto" }} />
+              </Button>
+            ),
+          }}
+        ></TextField>
+           
+          {/* <div style={{position: 'relative', display: 'inline-block'}}> */}
+      {/* <SearchOutlinedIcon style={{color: 'secondary', size: 'large', position: 'absolute', right: 0, top: 20, width: 30, height: 50}}/>
+      <TextField
+          id="Enter a word"
+          label="Search Catalog"
+          color="secondary"
+          margin="normal"
+          variant="outlined"
+          
+           //onChange={_.debounce((event, value) => this.handleSearch(value), 500)}
+        /> */}
 
           <div>
             {" "}
@@ -625,17 +690,20 @@ export function Catalog() {
                           Name That Word
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Fun and easy to play, the team that guesses the most words in the allotted time wins.
+                          Fun and easy to play, the team that guesses the most
+                          words in the allotted time wins.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                    <a
+                      <a
                         href="https://www.amazon.com/After-Dinner-Amusements-Prompts-Family/dp/1452173761/ref=sr_1_18?crid=3NIZM7ONAX8HA&keywords=word%2Bgames&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-18&th=1"
                         target="_blank"
-                      ><Button size="small" color="primary">
-                        Follow Link
-                      </Button></a>
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
                     </CardActions>
                   </Card>
                 </Item>
@@ -665,17 +733,20 @@ export function Catalog() {
                           Word Searches
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Strain your brain, not your eyes, as you solve the word searches.
+                          Strain your brain, not your eyes, as you solve the
+                          word searches.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                    <a
+                      <a
                         href="https://www.amazon.com/Brain-Games-Searches-Large-Print/dp/1450802281/ref=sr_1_19?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653016215&sprefix=word%2Caps%2C127&sr=8-19"
-                        target="_blank">
-                         <Button size="small" color="primary">
-                        Follow Link
-                      </Button></a>
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
                     </CardActions>
                   </Card>
                 </Item>
@@ -705,17 +776,21 @@ export function Catalog() {
                           Jabuka
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Boost your brain power with a word game where you bend rules and twist letters to make and steal words in a quick hit of fun!
+                          Boost your brain power with a word game where you bend
+                          rules and twist letters to make and steal words in a
+                          quick hit of fun!
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                    <a
+                      <a
                         href="https://www.amazon.com/Jabuka-Word-Game-Spontaneous-Fast-Paced/dp/B07TZJTLYX/ref=sr_1_19?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653017587&sprefix=word%2Caps%2C127&sr=8-19"
-                        target="_blank">
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button></a>
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
                     </CardActions>
                   </Card>
                 </Item>
@@ -745,17 +820,21 @@ export function Catalog() {
                           Codenames
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Codenames is a game of guessing which code names (words) in a set are related to a hint-word given by another player
+                          Codenames is a game of guessing which code names
+                          (words) in a set are related to a hint-word given by
+                          another player
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                    <a
+                      <a
                         href="https://www.amazon.com/Czech-Games-00031CGE-Codenames/dp/B014Q1XX9S/ref=sr_1_30?crid=3NIZM7ONAX8HA&keywords=word+games&qid=1653017802&sprefix=word%2Caps%2C127&sr=8-30"
-                        target="_blank">
-                      <Button size="small" color="primary">
-                        Follow Link
-                      </Button></a>
+                        target="_blank"
+                      >
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
                     </CardActions>
                   </Card>
                 </Item>

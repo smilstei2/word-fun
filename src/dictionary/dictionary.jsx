@@ -2,193 +2,233 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import TextField from '@mui/material/TextField';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-
-
-
-
-//function searchWord({ setWord }){
-  
-//   const message = {
-//     // required, must be an existing chat id //this has to be from the onclick thing that sets the current chat to what it is
-//     username: userName, // required //after create a username - this should be set to that
-//     text: title,
-//     chatId: currentChat.id,
-//   };
-//   fetch("https://z36h06gqg7.execute-api.us-east-1.amazonaws.com/messages", {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json", // tells REST that we will send the body data in JSON format
-//     },
-//     body: JSON.stringify(message),
-//   }).then(console.log("its working"));
-// };
-
-// let [searchQuery, setSearchQuery] = useState('');
+import TextField from "@mui/material/TextField";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import { useState, useEffect } from "react";
 
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Host': 'twinword-word-graph-dictionary.p.rapidapi.com',
-		'X-RapidAPI-Key': '7d676f781cmsh8806bd263a88d7cp1ee533jsnad42e6e10466'
-	}
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Host": "twinword-word-graph-dictionary.p.rapidapi.com",
+    "X-RapidAPI-Key": "7d676f781cmsh8806bd263a88d7cp1ee533jsnad42e6e10466",
+  },
 };
 
-
-
-// const [userWord, setUserWord] = useState("");
-// let handleSearchChange = (e) => {
-//   userWord = setUserWord(e.target.value);
-
-//   fetch('https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=${userWord}', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-// };
 const Item = styled(Card)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: 'center',
+  textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-export function Dictionary() {
-  return (
 
+export function Dictionary() {
+  const [word, setWord] = useState("");
+  const [definition, setDefinition] = useState("");
+  const [synonyms, setSynonyms] = useState([]);
+  const [usage, setUsage] = useState([]);
+
+  const CardStyle = { width: 370, height: 360, overflow: "auto" };
+  function searchWord(word) {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Host": "twinword-word-graph-dictionary.p.rapidapi.com",
+        "X-RapidAPI-Key": "7d676f781cmsh8806bd263a88d7cp1ee533jsnad42e6e10466",
+      },
+    };
+
+    fetch(
+      `https://twinword-word-graph-dictionary.p.rapidapi.com/association/?entry=${word}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => setSynonyms(response.assoc_word))
+      .catch((err) => console.error(err));
+
+    fetch(
+      `https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${word}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => setDefinition(response.meaning?.noun))
+      .catch((err) => console.error(err));
+
+    fetch(
+      `https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${word}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => setUsage(response.example))
+      .catch((err) => console.error(err));
+  }
+  function onText(value) {
+    setWord(value);
+    setSynonyms([]);
+    setDefinition("");
+    setUsage([]);
+  }
+  return (
     <div className="dictionary">
       <header className="dictionary-header">
-        
-        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}} id="enterWord" className="Name-div">
-        <TextField  id="Enter a word"label="Enter a word" color= "secondary" margin="normal" variant="outlined" />   
-        <Button variant="text" ><SearchOutlinedIcon size="large" color="secondary"></SearchOutlinedIcon></Button> 
-        {/* onChange={(event) => handleSearchChange(event.target.value)} 
-        onClick={() => setWord(userWord)} */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "10vh",
+          }}
+          id="enterWord"
+          className="Name-div"
+        >
+          <TextField
+            onKeyDown={(event) => {
+              if (event.code === "Enter") {
+                searchWord(word);
+              }
+            }}
+            onChange={(event) => onText(event.target.value)}
+            id="Enter a word"
+            label="Enter a word"
+            color="secondary"
+            margin="normal"
+            variant="outlined"
+            value={word}
+          />
+          <Button onClick={() => searchWord(word)} variant="text">
+            <SearchOutlinedIcon
+              size="large"
+              color="secondary"
+            ></SearchOutlinedIcon>
+          </Button>
+
           <div>
             {" "}
             <br />{" "}
           </div>
         </div>
-        
-       
+
         <br />
-        <div >
-        <Grid 
-        container spacing={4} 
-        columns={8}        
-        direction="row"
-        alignItems="center"
-        justifyContent="center"
-        >
-        <div id="Def" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
-        <Grid item xs={8}>
-        <Item>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              
-              <Typography  variant="h4">
-               Definition:
-              </Typography>
-              <Typography
-                sx={{ fontSize: 48 }}
-                color="secondary"
-                gutterBottom
-              >
-                Word
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary"  variant="h5">
-                Definition will go here.
-              </Typography>
-              
-            </CardContent>
-          </Card>
-          </Item>
+        <div>
+          <Grid
+            container
+            spacing={4}
+            columns={8}
+            direction="row"
+            alignItems="center"
+            justifyContent="space-around"
+            marginTop={12}
+          >
+            <div
+              id="Def"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "50vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={CardStyle}>
+                    <CardContent>
+                      <Typography variant="h4">Definition:</Typography>
+                      <Typography
+                        sx={{ fontSize: 48 }}
+                        color="secondary"
+                        gutterBottom
+                      >
+                        {word}
+                      </Typography>
+                      <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                        variant="h5"
+                      >
+                        {!definition ? "Definition will go here." : definition}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+            <div
+              id="AboutCard"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "50vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={CardStyle}>
+                    <CardContent>
+                      <Typography variant="h4">Synonyms:</Typography>
+                      <Typography
+                        sx={{ fontSize: 48 }}
+                        color="secondary"
+                        gutterBottom
+                      >
+                        {word}
+                      </Typography>
+                      <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                        variant="h5"
+                      >
+                        {!synonyms?.length
+                          ? "Synonyms will go here."
+                          : synonyms.map((s, i) => <div key={i}>{s}</div>)}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
+
+            <div
+              id="AboutCard"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "50vh",
+              }}
+            >
+              <Grid item xs={8}>
+                <Item>
+                  <Card sx={CardStyle}>
+                    <CardContent>
+                      <Typography variant="h4">Usage:</Typography>
+                      <Typography
+                        sx={{ fontSize: 48 }}
+                        color="secondary"
+                        gutterBottom
+                      >
+                        {word}
+                      </Typography>
+                      <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                        variant="h5"
+                      >
+                        {!usage?.length
+                          ? "Usage examples will go here."
+                          : usage.map((u, i) => <div key={i}>{u}</div>)}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Item>
+              </Grid>
+            </div>
           </Grid>
         </div>
-        <div id="AboutCard" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
-        <Grid item xs={8}>
-        <Item>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              
-              <Typography variant="h4">
-               Synonyms:
-              </Typography>
-              <Typography
-                sx={{ fontSize: 48  }}
-                color="secondary"
-                gutterBottom
-              >
-                Word
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary" variant="h5">
-                Synonyms will go here.
-              </Typography>
-              
-            </CardContent>
-          </Card>
-          </Item>
-          </Grid>
-        </div>
-        <div id="AboutCard" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
-        <Grid item xs={8}>
-        <Item>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              
-              <Typography variant="h4">
-               Antonyms:
-              </Typography>
-              <Typography
-                sx={{ fontSize: 48  }}
-                color="secondary"
-                gutterBottom
-              >
-                Word
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary" variant="h5">
-                Antonyms will go here.
-              </Typography>
-              
-            </CardContent>
-          </Card>
-          </Item>
-          </Grid>
-        </div>
-        <div id="AboutCard" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
-        <Grid item xs={8}>
-        <Item>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              
-              <Typography variant="h4">
-               Usage:
-              </Typography>
-              <Typography
-                sx={{ fontSize: 48  }}
-                color="secondary"
-                gutterBottom
-              >
-                Word
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary" variant="h5">
-                Usage examples will go here.
-              </Typography>
-              
-            </CardContent>
-          </Card>
-          </Item>
-          </Grid>
-        </div>
-        </Grid>
-        </div>
-       
       </header>
-      
     </div>
   );
 }
