@@ -30,10 +30,11 @@ const Item = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  minWidth: "375px",
+  minWidth: "200px",
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
+
 
 const catalog_array = [
   {
