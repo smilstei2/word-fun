@@ -31,7 +31,7 @@ import * as React from 'react';
 //import ReactDOM from 'react-dom';
 // import Button from '@mui/material/Button';
 import { Header } from "../header/header";
-import { TodoProvider } from "../state/context";
+import { AppProvider } from "../state/context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Dictionary } from "../dictionary/dictionary";
 import { Catalog } from "../catalog/catalog";
@@ -40,7 +40,7 @@ import { Wordle } from "../wordle/Wordle";
 function App() {
   return (
   <div>
-      <TodoProvider>
+      <AppProvider>
         <HashRouter>
           <Header />
           <Routes>
@@ -49,7 +49,7 @@ function App() {
             <Route path="/wordle" element={<Wordle />} /> 
           </Routes>
         </HashRouter>
-      </TodoProvider>
+      </AppProvider>
       
     </div>
   );

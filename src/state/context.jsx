@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-export const TodoContext = React.createContext();
+export const AppContext = React.createContext();
 
-export const TodoProvider = (props) => {
-  const [tasks, setTasks] = useState([]);
+export const AppProvider = (props) => {
+  const [word, setWord] = useState([]);
 
   return (
-    <TodoContext.Provider value={{ tasks, setTasks }}>
+    <AppContext.Provider value={{ word, setWord }}>
       {props.children}
-    </TodoContext.Provider>
+    </AppContext.Provider>
   );
 };

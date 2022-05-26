@@ -7,7 +7,8 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { AppContext } from "../state/context";
 
 const options = {
   method: "GET",
@@ -26,7 +27,7 @@ const Item = styled(Card)(({ theme }) => ({
 }));
 
 export function Dictionary() {
-  const [word, setWord] = useState("");
+  const {word, setWord} = useContext(AppContext);
   const [definition, setDefinition] = useState("");
   const [synonyms, setSynonyms] = useState([]);
   const [usage, setUsage] = useState([]);
