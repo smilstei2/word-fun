@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/word-fun/static/css/main.e6c13ad2.css",
-    "main.js": "/word-fun/static/js/main.4f1f3b2e.js",
+    "main.css": "/word-fun/static/css/main.b76c2c5f.css",
+    "main.js": "/word-fun/static/js/main.0233cf4c.js",
     "static/js/787.cf7ad2e7.chunk.js": "/word-fun/static/js/787.cf7ad2e7.chunk.js",
     "static/media/scrabble_img.png": "/word-fun/static/media/scrabble_img.b533a9fd251c67ef893e.png",
     "static/media/online_crossword_img.jpg": "/word-fun/static/media/online_crossword_img.436a46486cefa82d0dd1.jpg",
@@ -19,13 +19,14 @@
     "static/media/a_little_wordy.jpg": "/word-fun/static/media/a_little_wordy.dd9d11ee9f32c41e958d.jpg",
     "static/media/banana_img.jpg": "/word-fun/static/media/banana_img.58d61964e3295fe765c2.jpg",
     "static/media/boggle_img.jpg": "/word-fun/static/media/boggle_img.0562747cfc4f29798287.jpg",
+    "static/media/wordle-bank.txt": "/word-fun/static/media/wordle-bank.d1e180c0e95e817784be.txt",
     "index.html": "/word-fun/index.html",
-    "main.e6c13ad2.css.map": "/word-fun/static/css/main.e6c13ad2.css.map",
-    "main.4f1f3b2e.js.map": "/word-fun/static/js/main.4f1f3b2e.js.map",
+    "main.b76c2c5f.css.map": "/word-fun/static/css/main.b76c2c5f.css.map",
+    "main.0233cf4c.js.map": "/word-fun/static/js/main.0233cf4c.js.map",
     "787.cf7ad2e7.chunk.js.map": "/word-fun/static/js/787.cf7ad2e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.4f1f3b2e.js"
+    "static/css/main.b76c2c5f.css",
+    "static/js/main.0233cf4c.js"
   ]
 }
