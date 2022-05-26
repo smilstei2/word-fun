@@ -7,7 +7,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const options = {
   method: "GET",
@@ -210,7 +210,7 @@ export function Dictionary() {
                         color="secondary"
                         gutterBottom
                       >
-                       {usage?.length > 0 && word}
+                        {usage?.length > 0 && word}
                       </Typography>
                       <Typography
                         sx={{ mb: 1.5 }}

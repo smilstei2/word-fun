@@ -5,7 +5,7 @@ import { boardDefault, generateWordSet } from "./Words";
 import React, { useState, createContext, useEffect } from "react";
 import GameOver from "./Parts/GameOver";
 
- const AppContext = createContext();
+const AppContext = createContext();
 
 function Wordle() {
   const [board, setBoard] = useState(boardDefault);
@@ -97,9 +97,4 @@ function Wordle() {
   );
 }
 
-export{
-  Wordle,
-  AppContext
-}  
-
-
+export { Wordle, AppContext };

@@ -35,7 +35,6 @@ const Item = styled(Card)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-
 const catalog_array = [
   {
     title: "Scrabble",
@@ -196,76 +195,53 @@ export function Catalog() {
         </div>
 
         <br />
-        {/* <div> */}
-          <div
-            style={{
-            // container
-            //item xs={4}
-            // spacing={4}
-            // columns={8}
-            //alignItems="center"
+        <div
+          style={{
             display: "grid",
-            // justifyContent:"space-around",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "10px"
-
-
-            }}
-          // >
-          //   <div
-          //     id="Def"
-          //     style={{
-          //       // display: "flex",
-          //       //width: "25%",
-          //       justifyContent: "space-around",
-          //       alignItems: "center",
-          //       height: "100vh",
-          //     }}
-            >
-              {catalog_array
-                ?.filter((a) =>
-                  a.title.toLowerCase().includes(value.toLowerCase())
-                )
-                .map((c, i) => (
-                  
-                <Grid item xs={8}>
-                    <Item >
-                      <Card >
-                        <CardActionArea >
-                          <CardMedia
-                            component="img"
-                            height="300"
-                            image={c.image}
-                            alt={`${c.title} image`}
-                          />
-                          <CardContent>
-                            <Typography
-                              gutterBottom
-                              variant="h5"
-                              component="div"
-                            >
-                              {c.title}
-                            </Typography>
-                            <Typography height="40px" variant="body2" color="text.secondary">
-                              {c.description}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                          <a href={c.link} target="_blank">
-                            {" "}
-                            <Button size="small" color="primary">
-                              Follow Link
-                            </Button>
-                          </a>
-                        </CardActions>
-                      </Card>
-                    </Item>
-                  </Grid>
-                ))}
-            {/* </div> */}
-          </div>
-        {/* </div> */}
+            gap: "10px",
+          }}
+          
+        >
+          {catalog_array
+            ?.filter((a) => a.title.toLowerCase().includes(value.toLowerCase()))
+            .map((c, i) => (
+              <Grid item xs={8}>
+                <Item>
+                  <Card>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image={c.image}
+                        alt={`${c.title} image`}
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          {c.title}
+                        </Typography>
+                        <Typography
+                          height="40px"
+                          variant="body2"
+                          color="text.secondary"
+                        >
+                          {c.description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a href={c.link} target="_blank">
+                        {" "}
+                        <Button size="small" color="primary">
+                          Follow Link
+                        </Button>
+                      </a>
+                    </CardActions>
+                  </Card>
+                </Item>
+              </Grid>
+            ))}
+        </div>
       </header>
     </div>
   );
