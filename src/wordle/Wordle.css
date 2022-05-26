@@ -32,7 +32,7 @@
     height: calc(100vh - 170px);
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 10px;
     flex-direction: column;
   }
   
@@ -107,7 +107,7 @@
   
   .key {
     width: 50px;
-    height: 70px;
+    height: 60px;
     margin: 5px;
     border-radius: 4px;
     display: grid;
