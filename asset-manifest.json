@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/word-fun/static/css/main.b76c2c5f.css",
+    "main.css": "/word-fun/static/css/main.77ed390f.css",
     "main.js": "/word-fun/static/js/main.0233cf4c.js",
     "static/js/787.cf7ad2e7.chunk.js": "/word-fun/static/js/787.cf7ad2e7.chunk.js",
     "static/media/scrabble_img.png": "/word-fun/static/media/scrabble_img.b533a9fd251c67ef893e.png",
@@ -21,12 +21,12 @@
     "static/media/boggle_img.jpg": "/word-fun/static/media/boggle_img.0562747cfc4f29798287.jpg",
     "static/media/wordle-bank.txt": "/word-fun/static/media/wordle-bank.d1e180c0e95e817784be.txt",
     "index.html": "/word-fun/index.html",
-    "main.b76c2c5f.css.map": "/word-fun/static/css/main.b76c2c5f.css.map",
+    "main.77ed390f.css.map": "/word-fun/static/css/main.77ed390f.css.map",
     "main.0233cf4c.js.map": "/word-fun/static/js/main.0233cf4c.js.map",
     "787.cf7ad2e7.chunk.js.map": "/word-fun/static/js/787.cf7ad2e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b76c2c5f.css",
+    "static/css/main.77ed390f.css",
     "static/js/main.0233cf4c.js"
   ]
 }
