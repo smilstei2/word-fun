@@ -196,24 +196,31 @@ export function Catalog() {
         </div>
 
         <br />
-        <div>
-          <Grid
-            container
-            
-            spacing={4}
-            columns={8}
-            alignItems="center"
-            justifyContent="center"
-          >
-            <div
-              id="Def"
-              style={{
-                // display: "flex",
-                //width: "25%",
-                justifyContent: "space-around",
-                alignItems: "center",
-                height: "100vh",
-              }}
+        {/* <div> */}
+          <div
+            style={{
+            // container
+            //item xs={4}
+            // spacing={4}
+            // columns={8}
+            //alignItems="center"
+            display: "grid",
+            // justifyContent:"space-around",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "10px"
+
+
+            }}
+          // >
+          //   <div
+          //     id="Def"
+          //     style={{
+          //       // display: "flex",
+          //       //width: "25%",
+          //       justifyContent: "space-around",
+          //       alignItems: "center",
+          //       height: "100vh",
+          //     }}
             >
               {catalog_array
                 ?.filter((a) =>
@@ -221,9 +228,9 @@ export function Catalog() {
                 )
                 .map((c, i) => (
                   
-                  <Grid item xs={8}>
+                <Grid item xs={8}>
                     <Item >
-                      <Card sx={{ maxWidth: 345 }}>
+                      <Card >
                         <CardActionArea >
                           <CardMedia
                             component="img"
@@ -239,7 +246,7 @@ export function Catalog() {
                             >
                               {c.title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography height="40px" variant="body2" color="text.secondary">
                               {c.description}
                             </Typography>
                           </CardContent>
@@ -256,9 +263,9 @@ export function Catalog() {
                     </Item>
                   </Grid>
                 ))}
-            </div>
-          </Grid>
-        </div>
+            {/* </div> */}
+          </div>
+        {/* </div> */}
       </header>
     </div>
   );
