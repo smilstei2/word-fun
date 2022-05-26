@@ -35,7 +35,7 @@ import { TodoProvider } from "../state/context";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Dictionary } from "../dictionary/dictionary";
 import { Catalog } from "../catalog/catalog";
-import { Wordle } from "../wordle/wordle";
+import { Wordle } from "../wordle/Wordle";
 
 function App() {
   return (
