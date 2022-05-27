@@ -47,7 +47,7 @@ const catalog_array = [
     title: "Bananagrams",
     description:
       "Be the first to use all your letters. Words must read left to right horizontally, or top to bottom vertically.",
-    link: "https://www.amazon.com/Winning-Moves-Tile-Lock-Scrabble/dp/1223063151/ref=sr_1_3?keywords=scrabble&qid=1653007600&sr=8-3",
+    link: "https://www.amazon.com/Double-Bananagrams-Game-Set-tiles/dp/B001THPVA2/ref=sr_1_2_sspa?crid=3U36CEVZWU7PT&keywords=bananagrams&qid=1653686412&sprefix=bana%2Caps%2C111&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFBVFU3TjM4R0lDUzImZW5jcnlwdGVkSWQ9QTA0OTMwNTYzM0wxT1JJTEdPWTA4JmVuY3J5cHRlZEFkSWQ9QTA5NzU2NDMxSEQ5SDBOTDNKODJQJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
     image: banana_img,
   },
   {
